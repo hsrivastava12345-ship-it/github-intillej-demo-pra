@@ -58,5 +58,6 @@ public class Main {
         driver.findElement(By.xpath("//a[text() = "+date+"]")).click();
 
         System.out.println("Hello Commit");
+
     }
 }
