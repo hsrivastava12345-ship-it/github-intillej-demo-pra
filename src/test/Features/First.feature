@@ -8,3 +8,4 @@ Feature: Selenium Fundamentals
     Examples:
       | Website                                      |
       | https://testautomationpractice.blogspot.com/ |
+
