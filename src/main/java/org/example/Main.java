@@ -57,6 +57,6 @@ public class Main {
         selectYear.selectByContainsVisibleText(year);
         driver.findElement(By.xpath("//a[text() = "+date+"]")).click();
 
-
+        System.out.println("Hello Commit");
     }
 }
