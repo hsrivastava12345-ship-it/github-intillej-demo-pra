@@ -5,7 +5,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.*;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class Main {
     public static void main(String[] args) {
@@ -56,6 +58,12 @@ public class Main {
         driver.findElement(By.xpath("//a[text() = "+date+"]")).click();
 
         System.out.println("Hello Commit");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(19));
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
+
+        FluentWait<WebDriver> w= new FluentWait(driver).withTimeout(Duration.ofSeconds(30)).pollingEvery(Duration.ofSeconds(5)).ignoring(NoSuchElementException.class);
+
+        WebElement e = w.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("")));
     }
 }
