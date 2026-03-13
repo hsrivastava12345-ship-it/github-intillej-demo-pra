@@ -2,7 +2,7 @@ name: Run Cucumber Feature
 
 on:
   schedule:
-    - cron: '30 16 * * *'   # 10:00 PM IST (GitHub uses UTC)
+    - cron: '47 16 * * *'   # 10:00 PM IST (GitHub uses UTC)
   workflow_dispatch:        # Allows manual run from GitHub
 
 jobs:
