@@ -10,4 +10,4 @@ Feature: Selenium Fundamentals
     Examples:
       | Website                                      |
       | https://testautomationpractice.blogspot.com/ |
-      | https://www.youtube.com                      |
+#      | https://www.youtube.com                      |

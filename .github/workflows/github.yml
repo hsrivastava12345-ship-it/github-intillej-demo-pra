@@ -1,0 +1,28 @@
+name: Run Cucumber Feature
+
+on:
+  schedule:
+    - cron: '30 16 * * *'   # 10:00 PM IST (GitHub uses UTC)
+  workflow_dispatch:        # Allows manual run from GitHub
+
+jobs:
+  run-feature:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build Maven Project
+        run: mvn clean install -DskipTests
+
+      - name: Run First.feature
+        run: mvn test -Dcucumber.features="src/test/Features/First.feature"
